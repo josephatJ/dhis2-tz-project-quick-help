@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>dhis2-tz-project-quick-help documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">dhis2-tz-project-quick-help documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<p><a href="https://travis-ci.org/hisptz/ngx-seed-app"><img src="https://travis-ci.org/hisptz/ngx-seed-app.svg?branch=master" alt="Build Status" class="img-responsive"></a>
+<a href="https://codeclimate.com/github/hisptz/ngx-seed-app/maintainability"><img src="https://api.codeclimate.com/v1/badges/dbe97dbdfbd55344c38f/maintainability" alt="Maintainability" class="img-responsive"></a>
+<a href="https://codeclimate.com/github/hisptz/ngx-seed-app/test_coverage"><img src="https://api.codeclimate.com/v1/badges/dbe97dbdfbd55344c38f/test_coverage" alt="Test Coverage" class="img-responsive"></a> <a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/interactive-apps/ngx-seed-app.svg" alt="Greenkeeper badge" class="img-responsive"></a></p>
+<h1 id="angular-dhis2-based-seed-app">Angular DHIS2 based seed app</h1>
+<p>Boilerplate codes to fast track developing DHIS2 applications based on Angular framework</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ol>
+<li><a href="https://nodejs.org">NodeJs (10 or higher)</a></li>
+<li>npm (6.4.0 or higher), can be installed by running <code>apt install npm</code></li>
+<li>git, can be installed by running <code>apt install git</code></li>
+</ol>
+<h2 id="setup">Setup</h2>
+<p>Clone repository</p>
+<p><code>bash
+ git clone https://github.com/hisptz/ngx-seed-app.git</code></p>
+<p>Navigate to application root folder</p>
+<p><code>bash
+cd ngx-seed-app</code></p>
+<p>Install all required dependencies for the app</p>
+<p><code>bash
+npm install</code></p>
+<h2 id="development-server">Development server</h2>
+<p>To start development server</p>
+<p><code>npm start</code></p>
+<p>Navigate to <a href="http://localhost:4200">http://localhost:4200</a>.</p>
+<p>This command will require proxy-config.json file available in the root of your source code, usually this file has this format</p>
+<p><code>json
+{
+  &quot;/api&quot;: {
+    &quot;target&quot;: &quot;https://play.dhis2.org/2.29/&quot;,
+    &quot;secure&quot;: &quot;false&quot;,
+    &quot;auth&quot;: &quot;admin:district&quot;,
+    &quot;changeOrigin&quot;: &quot;true&quot;
+  },
+  &quot;/&quot;: {
+    &quot;target&quot;: &quot;https://play.dhis2.org/2.29/&quot;,
+    &quot;secure&quot;: &quot;false&quot;,
+    &quot;auth&quot;: &quot;admin:district&quot;,
+    &quot;changeOrigin&quot;: &quot;true&quot;
+  }
+}</code></p>
+<p>We have provided <code>proxy-config.example.json</code> file as an example, make a copy and rename to <code>proxy-config.json</code></p>
+<h2 id="index-db-setup">Index DB Setup</h2>
+<p>This app support index DB as based on <a href="https://dexie.org/">dexie library</a>. In order to initiatiate index db then you have to passed index db configuration in forRoot of core module, so in app.module.ts</p>
+<p><code>ts
+........
+@NgModule({
+  declarations: [AppComponent, ...fromPages.pages],
+  imports: [
+   ..........
+    CoreModule.forRoot({
+      namespace: &#39;hisptz&#39;,
+      version: 1,
+      models: {
+        users: &#39;id&#39;,
+        dataElement: &#39;id&#39;,
+        .......
+      }
+    })
+    .......
+    ]
+    ......
+    })</code></p>
+<p>where in the models, for example user will be a table &quot;user&quot; and &#39;id&#39; will be a keyIndex for the table</p>
+<h2 id="build">Build</h2>
+<p>To build the project run</p>
+<p><code>npm run build</code></p>
+<p>The build artifacts will be stored in the <code>dist/</code>, this will include a zip file ready for deploying to any DHIS2 instance.</p>
+<h2 id="running-unit-tests">Running unit tests</h2>
+<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
+<h2 id="running-end-to-end-tests">Running end-to-end tests</h2>
+<p>Run <code>ng e2e</code> to execute the end-to-end tests via <a href="http://www.protractortest.org/">Protractor</a>.</p>
+<h2 id="further-help">Further help</h2>
+<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://github.com/angular/angular-cli/blob/master/README.md">Angular CLI README</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
