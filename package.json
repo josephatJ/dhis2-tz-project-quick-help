@@ -1,10 +1,10 @@
 {
-  "name": "ngx-seed-app",
+  "name": "dhis2-tz-project-quick-help",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --aot && cd dist/ngx-seed-app && zip -r -D ngx-seed-app.zip .",
+    "build": "ng build --prod --aot && cd dist/dhis2-tz-project-quick-help && zip -r -D dhis2-tz-project-quick-help.zip .",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
